@@ -1,4 +1,4 @@
-# Maviance\S3PApiClient\InitiateApi
+# Dy05Maviance\S3PApiClient\InitiateApi
 
 All URIs are relative to */v2*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**subscriptionGet**](InitiateApi.md#subscriptionget) | **GET** /subscription | Get subscription payment handler
 
 # **billGet**
-> \Maviance\S3PApiClient\Model\Bill[] billGet($xApiVersion, $merchant, $serviceid, $serviceNumber)
+> \Dy05Maviance\S3PApiClient\Model\Bill[] billGet($xApiVersion, $merchant, $serviceid, $serviceNumber)
 
 Get bill payment handler
 
@@ -20,7 +20,7 @@ A request to this endpoint returns bill payment handler records for a service by
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Maviance\S3PApiClient\Service\InitiateApi(
+$apiInstance = new Dy05Maviance\S3PApiClient\Service\InitiateApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Maviance\S3PApiClient\Model\Bill[]**](../Model/Bill.md)
+[**\Dy05Maviance\S3PApiClient\Model\Bill[]**](../Model/Bill.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **quotestdPost**
-> \Maviance\S3PApiClient\Model\Quote quotestdPost($xApiVersion, $body)
+> \Dy05Maviance\S3PApiClient\Model\Quote quotestdPost($xApiVersion, $body)
 
 Request quote with price details about the payment
 
@@ -75,13 +75,13 @@ Calling this web-service requests a quote from the system for the payment collec
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Maviance\S3PApiClient\Service\InitiateApi(
+$apiInstance = new Dy05Maviance\S3PApiClient\Service\InitiateApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $xApiVersion = "3.0.0"; // string | api version info
-$body = new \Maviance\S3PApiClient\Model\QuoteRequest(); // \Maviance\S3PApiClient\Model\QuoteRequest | Quote Request
+$body = new \Dy05Maviance\S3PApiClient\Model\QuoteRequest(); // \Dy05Maviance\S3PApiClient\Model\QuoteRequest | Quote Request
 
 try {
     $result = $apiInstance->quotestdPost($xApiVersion, $body);
@@ -97,11 +97,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiVersion** | **string**| api version info | [default to 3.0.0]
- **body** | [**\Maviance\S3PApiClient\Model\QuoteRequest**](../Model/QuoteRequest.md)| Quote Request | [optional]
+ **body** | [**\Dy05Maviance\S3PApiClient\Model\QuoteRequest**](../Model/QuoteRequest.md)| Quote Request | [optional]
 
 ### Return type
 
-[**\Maviance\S3PApiClient\Model\Quote**](../Model/Quote.md)
+[**\Dy05Maviance\S3PApiClient\Model\Quote**](../Model/Quote.md)
 
 ### Authorization
 
@@ -115,7 +115,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionGet**
-> \Maviance\S3PApiClient\Model\Subscription[] subscriptionGet($xApiVersion, $merchant, $serviceid, $serviceNumber, $customerNumber)
+> \Dy05Maviance\S3PApiClient\Model\Subscription[] subscriptionGet($xApiVersion, $merchant, $serviceid, $serviceNumber, $customerNumber)
 
 Get subscription payment handler
 
@@ -126,7 +126,7 @@ A request to this endpoint looks up a subscription record for a service by eithe
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Maviance\S3PApiClient\Service\InitiateApi(
+$apiInstance = new Dy05Maviance\S3PApiClient\Service\InitiateApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Maviance\S3PApiClient\Model\Subscription[]**](../Model/Subscription.md)
+[**\Dy05Maviance\S3PApiClient\Model\Subscription[]**](../Model/Subscription.md)
 
 ### Authorization
 

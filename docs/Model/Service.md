@@ -16,11 +16,11 @@ Name | Type | Description | Notes
 **isReqCustomerAddress** | **bool** | If set to true (1), the customers address needs to be provided in the payment collection request. | 
 **isReqCustomerNumber** | **bool** | If set to true (1), a customer number needs to be provided in the payment collection request. Customer number meaning is different for each service. | 
 **isReqServiceNumber** | **bool** | If set to true (1), a service number needs to be provided in the payment collection request. Service number meaning is different for each service. | 
-**labelCustomerNumber** | [**\Maviance\S3PApiClient\Model\I18nText[]**](I18nText.md) | Label for customer number in multiple languages (if available) for this service. | [optional] 
-**labelServiceNumber** | [**\Maviance\S3PApiClient\Model\I18nText[]**](I18nText.md) | Label for service number in multiple languages (if available) for this service. | [optional] 
+**labelCustomerNumber** | [**\Dy05Maviance\S3PApiClient\Model\I18nText[]**](I18nText.md) | Label for customer number in multiple languages (if available) for this service. | [optional] 
+**labelServiceNumber** | [**\Dy05Maviance\S3PApiClient\Model\I18nText[]**](I18nText.md) | Label for service number in multiple languages (if available) for this service. | [optional] 
 **isVerifiable** | **bool** | If set to true (1), then the service number provided for this service can be verified before making a payment request | 
 **validationMask** | **string** | Optional mask for the service number entered during a payment for client side validations. All service numbers must comply to the mask in order to pass. The mask is a PCRE regular expression | [optional] 
-**hint** | [**\Maviance\S3PApiClient\Model\I18nText[]**](I18nText.md) | Translation texts for the hint notes to be displayed to the customer for this service. | [optional] 
+**hint** | [**\Dy05Maviance\S3PApiClient\Model\I18nText[]**](I18nText.md) | Translation texts for the hint notes to be displayed to the customer for this service. | [optional] 
 **denomination** | **int** | Service payment denomination. The payment amount must be a multiple of the denomination value. Example:  |Denomination|Amount|Valid| |-----|-----|-------| |1|100|true| |5|100|true| |200|100|false| |50|60|false| | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)

@@ -1,4 +1,4 @@
-# Maviance\S3PApiClient\AccountValidationApi
+# Dy05Maviance\S3PApiClient\AccountValidationApi
 
 All URIs are relative to */v2*
 
@@ -18,7 +18,7 @@ For services that support verification (indicated by the \"isVerifiable\" flag) 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Maviance\S3PApiClient\Service\AccountValidationApi(
+$apiInstance = new Dy05Maviance\S3PApiClient\Service\AccountValidationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

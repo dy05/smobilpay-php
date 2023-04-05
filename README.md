@@ -36,12 +36,12 @@ $url = "https://XXXXX";
 $xApiVersion = "3.0.0"; // string | api version info
 
 // init
-$config = new \Maviance\S3PApiClient\Configuration();
+$config = new \Dy05Maviance\S3PApiClient\Configuration();
 $config->setHost($url);
-$client = new \Maviance\S3PApiClient\ApiClient($token, $secret, ['verify' => false]);
+$client = new \Dy05Maviance\S3PApiClient\ApiClient($token, $secret, ['verify' => false]);
 
 // trigger request
-$apiInstance = new Maviance\S3PApiClient\Service\AccountApi($client, $config);
+$apiInstance = new Dy05Maviance\S3PApiClient\Service\AccountApi($client, $config);
 
 try {
     $result = $apiInstance->accountGet($xApiVersion);

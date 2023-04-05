@@ -1,5 +1,13 @@
 <?php
-namespace Maviance\S3PApiClient;
+
+namespace Dy05Maviance\S3PApiClient;
+
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
+use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\UriInterface;
+use Ramsey\Uuid\Uuid;
 
 /**
  * ApiClient Class Doc Comment
@@ -9,21 +17,9 @@ namespace Maviance\S3PApiClient;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-
-use GuzzleHttp\Client;
-use GuzzleHttp\Psr7\Uri;
-use Psr\Http\Message\RequestInterface;
-use Ramsey\Uuid\Uuid;
-
 class ApiClient extends Client {
-    /**
-     * @var
-     */
-    private $token;
-    /**
-     * @var
-     */
-    private $secret;
+    private string $token;
+    private string $secret;
 
     public function __construct($token, $secret, array $config = [])
     {
@@ -32,25 +28,30 @@ class ApiClient extends Client {
         parent::__construct($config);
     }
 
-    public function send(RequestInterface $request, array $options = []) {
+    /**
+     * @param RequestInterface $request
+     * @param array $options
+     * @return ResponseInterface
+     * @throws GuzzleException
+     */
+    public function send(RequestInterface $request, array $options = []): ResponseInterface
+    {
         $options['headers'] = ["Authorization" => $this->buildAuthorizationHeader($request)];
         return parent::send($request, $options);
     }
 
     /**
      * Build S3P Authorization Header
-     * @param $token
-     * @param $secret
-     * @param $http
-     * @param $url
-     * @param $data
+     * @param RequestInterface $request
      * @return string
      */
-    function buildAuthorizationHeader(RequestInterface $request) {
+    function buildAuthorizationHeader(RequestInterface $request): string
+    {
         $data = [];
         if ($request->getMethod() == "POST") {
-            $data = \GuzzleHttp\json_decode($request->getBody()->getContents(), true);
+            $data = json_decode($request->getBody()->getContents(), true);
         }
+
         $auth_titleKey = "s3pAuth";
         $auth_tokenKey = "s3pAuth_token";
         $auth_nonceKey = "s3pAuth_nonce";
@@ -69,37 +70,36 @@ class ApiClient extends Client {
                 "s3pAuth_token" => $this->token,
             );
 
-        // disect GET request query parameters
+        // dissect GET request query parameters
         if (!empty($request->getUri()->getQuery())) {
-            $queryparameter = explode("&", urldecode($request->getUri()->getQuery()));
-            foreach ($queryparameter as $k => $v) {
-                $item = explode("=", $v);
+            $queryParameters = explode("&", urldecode($request->getUri()->getQuery()));
+            foreach ($queryParameters as $param) {
+                $item = explode("=", $param);
                 $params[$item[0]] = $item[1];
             }
         }
+
         $sig = new HMACSignature(
             $request->getMethod(),
             $this->getUrl($request->getUri()),
             array_merge($data, $params)
         );
+
         $signature = $sig->generate($this->secret);
-        $v =
-            $auth_titleKey . " " .
-            $auth_timestampKey . "=\"" . $timestamp . "\"" . $separator .
+        return $auth_titleKey . " " . $auth_timestampKey . "=\"" . $timestamp . "\"" . $separator .
             $auth_signatureKey . "=\"" . $signature . "\"" . $separator .
             $auth_nonceKey . "=\"" . $nonce . "\"" . $separator .
             $auth_signatureMethodKey . "=\"" . $signature_method . "\"" . $separator .
             $auth_tokenKey . "=\"" . $this->token . "\"";
-
-        return $v;
     }
 
     /**
      * Build url to use in signature validation
-     * @param Uri $uri
+     * @param UriInterface $uri
      * @return string
      */
-    private function getUrl(Uri $uri) {
+    private function getUrl(UriInterface $uri): string
+    {
         // in case ports are not standard -> add to url
         return implode('',
             [

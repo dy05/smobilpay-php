@@ -1,38 +1,32 @@
 <?php
-namespace Maviance\S3PApiClient;
+namespace Dy05Maviance\S3PApiClient;
+use Exception;
+
 class HMACSignature {
+    private string $url;
+    private string $method;
+    private array $params;
+
     /**
      * This method generates the signature based on given parameters
      *
-     * @param array $parameters A list of parameters used for generation
+     * @param string $secret
      *
      * @return string
      */
-    public function generate($secret) {
-
+    public function generate(string $secret): string
+    {
         $encodedString = hash_hmac('sha1', $this->getBaseString(), $secret, true);
         return base64_encode($encodedString);
     }
 
     /**
-     * @var
-     */
-    private $method;
-    /**
-     * @var
-     */
-    private $url;
-    /**
-     * @var array
-     */
-    private $params;
-
-    /**
-     * @param       $method HTTP method
-     * @param       $url    URL
+     * @param string $method
+     * @param string $url
      * @param array $params parameters to include in signature
      */
-    public function __construct($method, $url, array $params) {
+    public function __construct(string $method, string $url, array $params)
+    {
         $this->method = $method;
         $this->url = $url;
         $this->params = $params;
@@ -40,13 +34,15 @@ class HMACSignature {
 
     /**
      * @param string $signature
-     * @param array $parameters
+     * @param string $secret
      *
      * @return bool
+     * @throws Exception
      */
-    public function verify($signature, $secret) {
+    public function verify(string $signature, string $secret): bool
+    {
         if ($signature !== $this->generate($secret)) {
-            throw new \Exception("Signature Does Not Match");
+            throw new Exception("Signature Does Not Match");
         }
 
         return true;
@@ -57,7 +53,8 @@ class HMACSignature {
      *
      * @return string
      */
-    public function getBaseString() {
+    public function getBaseString(): string
+    {
         $glue = "&";
         $sorted = $this->getParameterString();
 
@@ -73,11 +70,12 @@ class HMACSignature {
     /**
      * Prepares a string to be signed
      *
-     * @param array $parameters List of signature fields
+     * @param array $parameters
      *
      * @return string
      */
-    protected function getParameterString() {
+    protected function getParameterString(array $parameters = []): string
+    {
         $glue = "&";
         $stringToBeSigned = '';
         // lexically sort parameters

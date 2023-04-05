@@ -1,4 +1,4 @@
-# Maviance\S3PApiClient\AccountApi
+# Dy05Maviance\S3PApiClient\AccountApi
 
 All URIs are relative to */v2*
 
@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**accountGet**](AccountApi.md#accountget) | **GET** /account | Retrieve account information and remaining account balance
 
 # **accountGet**
-> \Maviance\S3PApiClient\Model\Account accountGet($xApiVersion)
+> \Dy05Maviance\S3PApiClient\Model\Account accountGet($xApiVersion)
 
 Retrieve account information and remaining account balance
 
@@ -18,7 +18,7 @@ This endpoint returns the user’s account information – most notably the curr
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Maviance\S3PApiClient\Service\AccountApi(
+$apiInstance = new Dy05Maviance\S3PApiClient\Service\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Maviance\S3PApiClient\Model\Account**](../Model/Account.md)
+[**\Dy05Maviance\S3PApiClient\Model\Account**](../Model/Account.md)
 
 ### Authorization
 

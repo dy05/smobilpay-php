@@ -1,4 +1,4 @@
-# Maviance\S3PApiClient\MasterdataApi
+# Dy05Maviance\S3PApiClient\MasterdataApi
 
 All URIs are relative to */v2*
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**voucherGet**](MasterdataApi.md#voucherget) | **GET** /voucher | Retrieve list of available vouchers to purchase
 
 # **cashinGet**
-> \Maviance\S3PApiClient\Model\Cashin[] cashinGet($xApiVersion, $serviceid)
+> \Dy05Maviance\S3PApiClient\Model\Cashin[] cashinGet($xApiVersion, $serviceid)
 
 Retrieve available cashin packages
 
@@ -25,7 +25,7 @@ This service provides available cashin packages to be made to the system.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Maviance\S3PApiClient\Service\MasterdataApi(
+$apiInstance = new Dy05Maviance\S3PApiClient\Service\MasterdataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Maviance\S3PApiClient\Model\Cashin[]**](../Model/Cashin.md)
+[**\Dy05Maviance\S3PApiClient\Model\Cashin[]**](../Model/Cashin.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cashoutGet**
-> \Maviance\S3PApiClient\Model\Cashout[] cashoutGet($xApiVersion, $serviceid)
+> \Dy05Maviance\S3PApiClient\Model\Cashout[] cashoutGet($xApiVersion, $serviceid)
 
 Retrieves available cashout packages
 
@@ -76,7 +76,7 @@ This service provides available cashout packages to be made to the system.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Maviance\S3PApiClient\Service\MasterdataApi(
+$apiInstance = new Dy05Maviance\S3PApiClient\Service\MasterdataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Maviance\S3PApiClient\Model\Cashout[]**](../Model/Cashout.md)
+[**\Dy05Maviance\S3PApiClient\Model\Cashout[]**](../Model/Cashout.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **merchantGet**
-> \Maviance\S3PApiClient\Model\Merchant[] merchantGet($xApiVersion)
+> \Dy05Maviance\S3PApiClient\Model\Merchant[] merchantGet($xApiVersion)
 
 Retrieve list of merchants supported by the system.
 
@@ -127,7 +127,7 @@ Provides merchants supported by the system. Every service is assigned to a merch
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Maviance\S3PApiClient\Service\MasterdataApi(
+$apiInstance = new Dy05Maviance\S3PApiClient\Service\MasterdataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Maviance\S3PApiClient\Model\Merchant[]**](../Model/Merchant.md)
+[**\Dy05Maviance\S3PApiClient\Model\Merchant[]**](../Model/Merchant.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **productGet**
-> \Maviance\S3PApiClient\Model\Product[] productGet($xApiVersion, $serviceid)
+> \Dy05Maviance\S3PApiClient\Model\Product[] productGet($xApiVersion, $serviceid)
 
 Retrieve list of available products
 
@@ -176,7 +176,7 @@ This service provides a list of all available products for all services.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Maviance\S3PApiClient\Service\MasterdataApi(
+$apiInstance = new Dy05Maviance\S3PApiClient\Service\MasterdataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Maviance\S3PApiClient\Model\Product[]**](../Model/Product.md)
+[**\Dy05Maviance\S3PApiClient\Model\Product[]**](../Model/Product.md)
 
 ### Authorization
 
@@ -216,7 +216,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **serviceGet**
-> \Maviance\S3PApiClient\Model\Service[] serviceGet($xApiVersion)
+> \Dy05Maviance\S3PApiClient\Model\Service[] serviceGet($xApiVersion)
 
 Retrieve list of services supported by the system.
 
@@ -227,7 +227,7 @@ This service endpoint provides information about the services supported by . Eac
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Maviance\S3PApiClient\Service\MasterdataApi(
+$apiInstance = new Dy05Maviance\S3PApiClient\Service\MasterdataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Maviance\S3PApiClient\Model\Service[]**](../Model/Service.md)
+[**\Dy05Maviance\S3PApiClient\Model\Service[]**](../Model/Service.md)
 
 ### Authorization
 
@@ -265,7 +265,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **serviceIdGet**
-> \Maviance\S3PApiClient\Model\Service serviceIdGet($xApiVersion, $id)
+> \Dy05Maviance\S3PApiClient\Model\Service serviceIdGet($xApiVersion, $id)
 
 Retrieve single service
 
@@ -276,7 +276,7 @@ This service endpoint provides information about the selected service. Each serv
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Maviance\S3PApiClient\Service\MasterdataApi(
+$apiInstance = new Dy05Maviance\S3PApiClient\Service\MasterdataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Maviance\S3PApiClient\Model\Service**](../Model/Service.md)
+[**\Dy05Maviance\S3PApiClient\Model\Service**](../Model/Service.md)
 
 ### Authorization
 
@@ -316,7 +316,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **topupGet**
-> \Maviance\S3PApiClient\Model\Topup[] topupGet($xApiVersion, $serviceid)
+> \Dy05Maviance\S3PApiClient\Model\Topup[] topupGet($xApiVersion, $serviceid)
 
 Retrieve available topup packages
 
@@ -327,7 +327,7 @@ This service provides a list of all available topup packages. DEPRECTATED: Some 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Maviance\S3PApiClient\Service\MasterdataApi(
+$apiInstance = new Dy05Maviance\S3PApiClient\Service\MasterdataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Maviance\S3PApiClient\Model\Topup[]**](../Model/Topup.md)
+[**\Dy05Maviance\S3PApiClient\Model\Topup[]**](../Model/Topup.md)
 
 ### Authorization
 
@@ -367,7 +367,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **voucherGet**
-> \Maviance\S3PApiClient\Model\Product[] voucherGet($xApiVersion, $serviceid)
+> \Dy05Maviance\S3PApiClient\Model\Product[] voucherGet($xApiVersion, $serviceid)
 
 Retrieve list of available vouchers to purchase
 
@@ -378,7 +378,7 @@ This service provides a list of all available vouchers for all services. A purch
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Maviance\S3PApiClient\Service\MasterdataApi(
+$apiInstance = new Dy05Maviance\S3PApiClient\Service\MasterdataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -404,7 +404,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Maviance\S3PApiClient\Model\Product[]**](../Model/Product.md)
+[**\Dy05Maviance\S3PApiClient\Model\Product[]**](../Model/Product.md)
 
 ### Authorization
 

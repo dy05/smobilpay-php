@@ -1,4 +1,4 @@
-# Maviance\S3PApiClient\VerifyApi
+# Dy05Maviance\S3PApiClient\VerifyApi
 
 All URIs are relative to */v2*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**verifytxGet**](VerifyApi.md#verifytxget) | **GET** /verifytx | Get the current payment collection status
 
 # **historystdGet**
-> \Maviance\S3PApiClient\Model\PaymentStatus[] historystdGet($xApiVersion, $timestampFrom, $timestampTo)
+> \Dy05Maviance\S3PApiClient\Model\PaymentStatus[] historystdGet($xApiVersion, $timestampFrom, $timestampTo)
 
 Retrieve list of historic payment collection.
 
@@ -19,7 +19,7 @@ This endpoint allows the search for historic payment collection records by time 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Maviance\S3PApiClient\Service\VerifyApi(
+$apiInstance = new Dy05Maviance\S3PApiClient\Service\VerifyApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Maviance\S3PApiClient\Model\PaymentStatus[]**](../Model/PaymentStatus.md)
+[**\Dy05Maviance\S3PApiClient\Model\PaymentStatus[]**](../Model/PaymentStatus.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **verifytxGet**
-> \Maviance\S3PApiClient\Model\PaymentStatus[] verifytxGet($xApiVersion, $ptn, $trid)
+> \Dy05Maviance\S3PApiClient\Model\PaymentStatus[] verifytxGet($xApiVersion, $ptn, $trid)
 
 Get the current payment collection status
 
@@ -72,7 +72,7 @@ Call this endpoint to retrieve the current payment status by either transaction 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Maviance\S3PApiClient\Service\VerifyApi(
+$apiInstance = new Dy05Maviance\S3PApiClient\Service\VerifyApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Maviance\S3PApiClient\Model\PaymentStatus[]**](../Model/PaymentStatus.md)
+[**\Dy05Maviance\S3PApiClient\Model\PaymentStatus[]**](../Model/PaymentStatus.md)
 
 ### Authorization
 

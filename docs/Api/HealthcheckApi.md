@@ -1,4 +1,4 @@
-# Maviance\S3PApiClient\HealthcheckApi
+# Dy05Maviance\S3PApiClient\HealthcheckApi
 
 All URIs are relative to */v2*
 
@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**pingGet**](HealthcheckApi.md#pingget) | **GET** /ping | Check on the availability of the api
 
 # **pingGet**
-> \Maviance\S3PApiClient\Model\Ping pingGet($xApiVersion)
+> \Dy05Maviance\S3PApiClient\Model\Ping pingGet($xApiVersion)
 
 Check on the availability of the api
 
@@ -18,7 +18,7 @@ This endpoint simply checks the existence and validity of the request on the ser
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Maviance\S3PApiClient\Service\HealthcheckApi(
+$apiInstance = new Dy05Maviance\S3PApiClient\Service\HealthcheckApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Maviance\S3PApiClient\Model\Ping**](../Model/Ping.md)
+[**\Dy05Maviance\S3PApiClient\Model\Ping**](../Model/Ping.md)
 
 ### Authorization
 
